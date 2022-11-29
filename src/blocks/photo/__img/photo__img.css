@@ -1,7 +1,7 @@
 .photo__img {
-  width: 450px;
-  align-self: center;
-  justify-self: center;
+  width: 400px;
+  /* align-self: center;
+  justify-self: center; */
   cursor: pointer;
 }
 

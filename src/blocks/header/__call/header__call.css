@@ -1,6 +1,15 @@
 .header__call {
   margin: 0;
-  text-decoration: underline;
-  color: black;
+  color: white;
   cursor: pointer;
+  background-color: orangered;
+  border: none;
+  border-radius: 100px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header__call:hover {
+  opacity: .8;
 }

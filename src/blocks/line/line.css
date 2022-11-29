@@ -1,5 +1,6 @@
 .line {
   border-bottom: 1px solid grey;
   width: 700px;
+  margin-top: 50px;
   align-self: center;
 }

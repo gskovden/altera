@@ -3,5 +3,9 @@
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.header__phone:hover {
+  opacity: .8;
 }

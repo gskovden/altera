@@ -2,7 +2,9 @@
   margin: 0;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .header__item:hover {

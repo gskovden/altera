@@ -1,17 +1,19 @@
 .main__title {
   margin: 0;
   color: white;
+  font-size: 110px;
+  font-weight: 700;
   z-index: 5;
 }
 
 .main__title::before {
-  content: '';
-  background: rgba(0,0,0,0.6);
-  display: block;
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
   left: 0;
-  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #2A2C2F;
+  opacity: .8;
+  z-index: -1; 
 }

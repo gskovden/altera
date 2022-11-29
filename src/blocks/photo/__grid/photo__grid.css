@@ -1,5 +1,7 @@
 .photo__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 120px;
+  grid-template-areas: 
+  "top-left top-right"
+  "bottom-left bottom-right";
 }

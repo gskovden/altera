@@ -1,6 +1,8 @@
 .copyright__block {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin: 0 50px 0 50px;
+  height: 100%;
 }

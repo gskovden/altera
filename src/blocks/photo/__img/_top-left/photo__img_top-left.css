@@ -1,0 +1,4 @@
+.photo__img_top-left {
+  grid-area: top-left;
+  justify-self: flex-end;
+}

@@ -1,0 +1,5 @@
+.contacts__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 50px 0 50px;
+}

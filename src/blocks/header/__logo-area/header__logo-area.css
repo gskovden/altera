@@ -1,0 +1,7 @@
+.header__logo-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  text-decoration: none;
+}

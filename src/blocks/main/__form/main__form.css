@@ -1,0 +1,10 @@
+.main__form {
+  z-index: 5;
+  background-color: white;
+  padding: 50px;
+  border-radius: 100px;
+  margin: 150px 0 0 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}

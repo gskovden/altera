@@ -49,8 +49,8 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: 'src/index.html'
-        // favicon: 'src/images/logo/logo.ico'
+        template: 'src/index.html',
+        favicon: 'src/images/logo/logo.ico'
       }),
       new MiniCssExtractPlugin(), // подключение плагина для объединения файлов
       new CleanWebpackPlugin(),

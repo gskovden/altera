@@ -9,7 +9,7 @@
 
   <header class="header">
     <div class="header__block">
-      <a class="header__title" href="#main"><h1 class="header__title">ООО "Альтера"</h1></a>
+      <a class="header__logo-area" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
       <ul class="header__nav">
         <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
         <li class="header__link"><a class="header__item" href="#technical">Технические характеристики</a></li>
@@ -18,7 +18,7 @@
         <li class="header__link"><a class="header__item" href="#contacts">Контакты</a></li>
       </ul>
       <a class="header__phone" href="tel:+7038070888">
-        <img src="" alt="телефон" class="header__img">
+        <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
         <p class="header__tel">+7 903 807-08-88</p>
       </a>
       <a class="header__call">Заказать консультацию</a>
@@ -26,8 +26,14 @@
   </header>
 
   <section class="section main" id="main">
-    <div class="main__img"></div>
-    <h2 class="main__title">Аренда помещения по адресу г. Тверь, ул. Вагжанова, д.2а</h2>
+      <h2 class="main__title">Аренда недвижимости</h2>
+      <form action="POST" class="main__form">
+        <div class="main__unit">
+          <input type="text" class="main__input" placeholder="+7 (___) ___-__-__" required>
+          <button class="main__submit-button" type="submit">Записаться на осмотр</button>
+        </div>
+        <p class="main__text">Нажимая кнопку "Записаться на осмотр" я даю согласие на обработку персональных данных</p>
+      </form>
   </section>
 
   <section class="section technical" id="technical">
@@ -82,34 +88,58 @@
         <p class="technical__text">Материал дверей</p>
       </div>
     </div>
-    <div class="line"></div>
   </section>
 
   <section class="section plan" id="plan">
     <h2 class="plan__title">План помещения</h2>
-    <img src="" alt="план помещения" class="plan__img">
+    <img src="<%=require('../src/images/plan/plan.jpg')%>" alt="план помещения" class="plan__img">
   </section>
 
   <section class="section photo" id="photo">
     <h2 class="photo__title">Фото</h2>
     <div class="photo__grid">
-      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="помещение" class="photo__img">
+      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="помещение" class="photo__img photo__img_top-left">
+      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="помещение" class="photo__img photo__img_top-right">
+      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="помещение" class="photo__img photo__img_bottom-left">
+      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="помещение" class="photo__img photo__img_bottom-right">
     </div>
   </section>
 
   <section class="section contacts" id="contacts">
     <h2 class="contacts__title">Контакты</h2>
-    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A406589db484bebf721153b588b4ac058c5c84821d8002ca053500109fe95d8d8&amp;source=constructor" frameborder="0"></iframe>
+    <div class="contacts__block">
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A406589db484bebf721153b588b4ac058c5c84821d8002ca053500109fe95d8d8&amp;source=constructor" frameborder="0"></iframe>
+      <div class="contacts__area">
+        <div class="contacts__part">
+          <div class="contacts__unit">
+            <img src="<%=require('../src/images/contacts/address.svg')%>" alt="адрес" class="contacts__img">
+            <p class="contacts__subtitle">Адрес:</p>
+          </div>
+          <p class="contacts__item">г. Тверь, ул. Вагжанова, д. 2а</p>
+        </div>
+        <a class="contacts__part" href="tel:+7038070888">
+          <div class="contacts__unit">
+            <img src="<%=require('../src/images/contacts/phone.svg')%>" alt="телефон" class="contacts__img">
+            <p class="contacts__subtitle">Телефон:</p>
+          </div>
+          <p class="contacts__item">+7 903 807-08-88</p>
+        </a>
+        <a class="contacts__part" href="mailto:tver.rus69@yandex.ru">
+          <div class="contacts__unit">
+            <img src="<%=require('../src/images/contacts/e-mail.svg')%>" alt="e-mail" class="contacts__img">
+            <p class="contacts__subtitle">E-mail:</p>
+          </div>
+          <p class="contacts__item">tver.rus69@yandex.ru</p>
+        </a>
+      </div>
+    </div>
   </section>
 
   <section class="form-area">
     <h2 class="form-area__title">Есть вопросы?</h2>
     <p class="form-area__subtitle">Запишитесь на осмотр или задайте любой вопрос заполнив форму ниже</p>
     <form action="POST" class="form">
-      <input type="text" class="form__input" placeholder="Имя" required>
+      <input type="text" class="form__input" placeholder="Имя">
       <input type="text" class="form__input" placeholder="E-mail" required>
       <input type="text" class="form__input" placeholder="Телефон" required>
       <input type="text" class="form__input" placeholder="Текст">
@@ -120,16 +150,22 @@
 
   <footer class="footer">
     <div class="footer__block">
-      <h2 class="footer__title">ООО "Альтера"</h2>
+      <div class="footer__unit">
+        <div class="footer__logo-area">
+          <img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="footer__logo">
+          <h2 class="footer__title">Альтера</h2>
+        </div>
+        <p class="footer__address">г. Тверь, ул. Вагжанова, д. 2а</p>
+      </div>
       <ul class="footer__links">
-        <li><a class="footer__ref" href="#main">Главная</a></li>
-        <li><a class="footer__ref" href="#technical">Технические характеристики</a></li>
-        <li><a class="footer__ref" href="#plan">План помещения</a></li>
-        <li><a class="footer__ref" href="#photo">Фото</a></li>
-        <li><a class="footer__ref" href="#contacts">Контакты</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#main">Главная</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#technical">Технические характеристики</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#plan">План помещения</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#photo">Фото</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#contacts">Контакты</a></li>
       </ul>
       <a class="footer__phone" href="tel:+7038070888">
-        <img src="" alt="телефон" class="footer__img">
+        <img src="<%=require('../src/images/footer/phone.svg')%>" alt="телефон" class="footer__img">
         <p class="footer__tel">+7 903 807-08-88</p>
       </a>
       <a class="footer__call">Заказать консультацию</a>
@@ -140,7 +176,7 @@
     <div class="copyright__block">
       <p class="copyright__title">ООО "Альтера"</p>
       <p class="copyright__subtitle">Все права защищены. ©2007 - 2022</p>
-      <p class="copyright__design">Разработано в gskovdesign</p>
+      <p class="copyright__design">Разработано в <a class="copyright__ref" href="https://gskovdesign.ru/" target="_blank">gskovdesign</a></p>
     </div>
   </section>
 

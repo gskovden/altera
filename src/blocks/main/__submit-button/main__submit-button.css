@@ -1,0 +1,15 @@
+.main__submit-button {
+  margin: 0;
+  background-color: orangered;
+  border: none;
+  border-radius: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.main__submit-button:hover {
+  opacity: .8;
+}

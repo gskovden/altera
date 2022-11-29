@@ -1,24 +1,31 @@
 import './pages/index.css';
 
-//плавная прокрутка
-const anchors = document.querySelectorAll('a[href*="#"]');
-
-for (let anchor of anchors) {
-	anchor.addEventListener('click', function(e) {
-		e.preventDefault();
-		const blockID = anchor.getAttribute('href');
-		document.querySelector('' + blockID).scrollIntoView({
-			behavior: "smooth",
-			block: "start"
-		})
-	})
-}
-
 const popupFullSizeImage = document.querySelector('#imagePopup');
 const popupImage = popupFullSizeImage.querySelector('.popup__image');
 const closeButton = document.querySelector('.popup__close-button');
 const popup = document.querySelector('.popup');
 const image = document.querySelectorAll('.photo__img');
+const header = document.querySelector('.header');
+
+//опасити хэдера при скролле
+window.addEventListener('scroll', () => {
+  if (window.scrollHeight !== window.innerHeight && window.scrollY !== 0) {
+    // Если прокрутка есть, то делаем блок прозрачным
+    header.classList.add('header_scroll');
+  } else {
+		header.classList.remove('header_scroll');
+	}
+})
+
+// window.onscroll = function() {
+//   let scrolled = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0) // Получаем положение скролла
+//   if (scrolled !== 0) {
+//     // Если прокрутка есть, то делаем блок прозрачным
+//     header.classList.add('header_scroll');
+//   } else {
+// 		header.classList.remove('header_scroll');
+// 	}
+// };
 
 //функция открытия попапов
 function openPopup() {

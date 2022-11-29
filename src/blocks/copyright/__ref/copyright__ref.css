@@ -1,0 +1,10 @@
+.copyright__ref {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+
+.copyright__ref:hover {
+  color: blueviolet;
+}
