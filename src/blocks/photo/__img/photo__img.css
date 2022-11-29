@@ -1,0 +1,10 @@
+.photo__img {
+  width: 450px;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.photo__img:hover {
+  opacity: .8;
+}

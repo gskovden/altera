@@ -1,0 +1,9 @@
+.footer__ref {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__ref:hover {
+  text-decoration: underline;
+}

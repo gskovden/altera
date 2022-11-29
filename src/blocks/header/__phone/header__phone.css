@@ -1,0 +1,7 @@
+.header__phone {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,6 @@
+.copyright__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 50px 0 50px;
+}
