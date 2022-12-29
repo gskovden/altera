@@ -3,10 +3,30 @@
   cursor: pointer;
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
+  opacity: .9;
 }
 
 .header__item:hover {
   text-decoration: underline;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1800px) {
+  .header__item {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .header__item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header__item {
+    font-size: 20px;
+  }
 }

@@ -2,4 +2,35 @@
   min-height: 50px;
   width: 700px;
   margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .form__input {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form__input {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form__input {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form__input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form__input {
+    width: 200px;
+  }
 }

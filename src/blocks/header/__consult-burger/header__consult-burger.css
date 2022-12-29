@@ -1,0 +1,12 @@
+.header__consult-burger {
+  margin: 0;
+  color: white;
+  cursor: pointer;
+  background-color: orangered;
+  border: none;
+  border-radius: 100px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+}

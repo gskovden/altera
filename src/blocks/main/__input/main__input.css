@@ -1,5 +1,18 @@
 .main__input {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   border-radius: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main__input {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__input {
+    padding: 0;
+    width: 160px;
+  }
 }

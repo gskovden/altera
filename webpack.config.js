@@ -1,7 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -52,7 +53,36 @@ module.exports = {
         template: 'src/index.html',
         favicon: 'src/images/logo/logo.ico'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'privacy.html',
+        template: 'src/privacy.html',
+        favicon: 'src/images/logo/logo.ico'
+      }),
+      new HtmlWebpackPlugin({  // Also generate a .html
+        filename: 'template_mail.html',
+        template: 'src/template_mail.html'
+      }),
       new MiniCssExtractPlugin(), // подключение плагина для объединения файлов
+      new CopyWebpackPlugin({
+        patterns: [
+            // {
+            //     from: __dirname + '/src/sendmail.php', // откуда
+            //     to: __dirname + '/dist' // куда
+            // },
+            {
+              from: __dirname + '/inputmask.es6.js', // откуда
+              to: __dirname + '/dist' // куда
+          },
+          {
+            from: __dirname + '/inputmask.js', // откуда
+            to: __dirname + '/dist' // куда
+        },
+        {
+          from: __dirname + '/.htaccess', // откуда
+          to: __dirname + '/dist' // куда
+      }
+        ]
+    }),
       new CleanWebpackPlugin(),
     ] 
   }; 

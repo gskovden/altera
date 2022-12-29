@@ -1,0 +1,12 @@
+.photo__arrow-left {
+  left: 25px;
+  background: #fff url(../../../images/photo/arrow-left.svg) no-repeat 30px 26px;
+  height: 80px;
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 6%), 0 2px 4px rgb(0 0 0 / 12%);
+  border-radius: 100px;
+	border: 1px black;
+}

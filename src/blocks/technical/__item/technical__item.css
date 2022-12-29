@@ -1,4 +1,13 @@
 .technical__item {
   margin: 0;
   border-bottom: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .technical__item {
+    border-bottom: none;
+  }
 }

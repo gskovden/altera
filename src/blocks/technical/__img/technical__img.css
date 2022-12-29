@@ -1,0 +1,16 @@
+.technical__img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .technical__img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .technical__img {
+    width: 50px;
+  }
+}

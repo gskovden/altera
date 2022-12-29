@@ -1,0 +1,9 @@
+.form__personal {
+  text-decoration: none;
+  color: chocolate;
+  cursor: pointer;
+}
+
+.form__personal:hover {
+  opacity: .8;
+}

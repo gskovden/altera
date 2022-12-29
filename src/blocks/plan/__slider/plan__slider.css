@@ -1,0 +1,5 @@
+.plan__slider {
+  display: flex;
+  transition: all ease 1s;
+  width: 100%;
+}

@@ -1,6 +1,38 @@
 .main__unit {
-  margin: 0;
+  margin: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1700px) {
+  .main__unit {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .main__unit {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .main__unit {
+    margin: 0 55px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main__unit {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main__unit {
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
 }

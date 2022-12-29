@@ -3,3 +3,9 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 600px) {
+  .copyright__design {
+    display: none;
+  }
+}

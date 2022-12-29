@@ -1,0 +1,15 @@
+.technical__text_grid {
+  text-align:left;
+}
+
+@media screen and (max-width: 1000px) {
+  .technical__text_grid {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .technical__text_grid {
+    text-align: left;
+  }
+}

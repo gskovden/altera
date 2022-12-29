@@ -1,7 +1,15 @@
 .contacts__area {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   align-self: center;
   justify-self: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .contacts__area {
+    width: 100%;
+  }
 }

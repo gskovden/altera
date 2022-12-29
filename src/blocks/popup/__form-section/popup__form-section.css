@@ -1,0 +1,6 @@
+.popup__form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px;
+}

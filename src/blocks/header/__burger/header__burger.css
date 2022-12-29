@@ -1,0 +1,15 @@
+@media screen and (max-width: 1300px) {
+  .header__burger {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__burger {
+    right: 25px;
+  }
+}

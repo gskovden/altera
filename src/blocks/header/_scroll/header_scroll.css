@@ -1,3 +1,5 @@
 .header_scroll {
   opacity: .8;
+  background-color:#5F8EB3;
+  transition: background-color 2s ease;
 }

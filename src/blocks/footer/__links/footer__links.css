@@ -2,4 +2,11 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__links {
+    display: none;
+  }
 }

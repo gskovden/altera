@@ -1,6 +1,44 @@
 .main__text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   text-align: center;
-  margin: 40px 0 0 0;
+  margin: 30px 0 0 0;
+  width: 600px;
+}
+
+@media screen and (max-width: 1600px) {
+  .main__text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main__text {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main__text {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main__text {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__text {
+    width: 400px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main__text {
+    width: 200px;
+  }
 }

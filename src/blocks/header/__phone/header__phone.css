@@ -9,3 +9,9 @@
 .header__phone:hover {
   opacity: .8;
 }
+
+@media screen and (max-width: 750px) {
+  .header__phone {
+    display: none;
+  }
+}

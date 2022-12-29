@@ -6,10 +6,28 @@
   border: none;
   border-radius: 100px;
   padding: 5px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 
 .header__call:hover {
   opacity: .8;
+}
+
+@media screen and (max-width: 1800px) {
+  .header__call {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .header__call {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header__call {
+    display: none;
+  }
 }

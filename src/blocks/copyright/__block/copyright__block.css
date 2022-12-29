@@ -3,6 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0 50px 0 50px;
+  margin: 0 50px;
   height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .copyright__block {
+    margin: 0 25px;
+  }
 }

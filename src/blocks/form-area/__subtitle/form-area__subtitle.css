@@ -3,3 +3,34 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 800px) {
+  .form-area__subtitle {
+    width: 600px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form-area__subtitle {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-area__subtitle {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form-area__subtitle {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-area__subtitle {
+    width: 200px;
+  }
+}

@@ -8,11 +8,18 @@
 <body class="page">
 
   <header class="header">
+    <div class="header__burger">
+      <div class="header__burger-btn">
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+      </div>
+    </div>
     <div class="header__block">
       <a class="header__logo-area" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
       <ul class="header__nav">
         <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
-        <li class="header__link"><a class="header__item" href="#technical">Технические характеристики</a></li>
+        <li class="header__link"><a class="header__item" href="#technical">Технические параметры</a></li>
         <li class="header__link"><a class="header__item" href="#plan">План помещения</a></li>
         <li class="header__link"><a class="header__item" href="#photo">Фото</a></li>
         <li class="header__link"><a class="header__item" href="#contacts">Контакты</a></li>
@@ -23,86 +30,106 @@
       </a>
       <a class="header__call">Заказать консультацию</a>
     </div>
+    <div class="header__burger-type">
+      <div class="header__burger-links">
+        <a class="header__logo-area_burger" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+        <ul class="header__burger-list">
+          <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
+          <li class="header__link"><a class="header__item" href="#technical">Технические параметры</a></li>
+          <li class="header__link"><a class="header__item" href="#plan">План помещения</a></li>
+          <li class="header__link"><a class="header__item" href="#photo">Фото</a></li>
+          <li class="header__link"><a class="header__item" href="#contacts">Контакты</a></li>
+        </ul>
+        <a class="header__consult-burger">Заказать консультацию</a>
+        <a class="header__area" href="tel:+7038070888">
+          <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
+          <p class="header__item">+7 903 807-08-88</p>
+        </a>
+        <a href="#contacts" class="header__area">
+          <img src="<%=require('../src/images/burger/address.svg')%>" alt="адрес" class="header__img">
+          <p class="header__item">г. Тверь, ул. Вагжанова, д. 2а</p>
+        </a>
+        <a href="mailto:tver.rus69@yandex.ru" class="header__area">
+          <img src="<%=require('../src/images/burger/email.svg')%>" alt="e-mail" class="header__img">
+          <p class="header__item">tver.rus69@yandex.ru</p>
+        </a>
+        <span class="header__design">Разработано в<a class="header__design_link" href="https://gskovdesign.ru/" target="_blank">&nbsp;gskovdesign.ru</a></span>
+      </div>
+    </div>
   </header>
 
   <section class="section main" id="main">
       <h2 class="main__title">Аренда недвижимости</h2>
-      <form action="POST" class="main__form">
+      <form action="" class="main__form">
         <div class="main__unit">
-          <input type="text" class="main__input" placeholder="+7 (___) ___-__-__" required>
+          <input class="main__input" type="tel" name="tel" id="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
           <button class="main__submit-button" type="submit">Записаться на осмотр</button>
         </div>
-        <p class="main__text">Нажимая кнопку "Записаться на осмотр" я даю согласие на обработку персональных данных</p>
+        <p class="main__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="main__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
       </form>
   </section>
 
   <section class="section technical" id="technical">
-    <h2 class="technical__title">Технические характеристики</h2>
-    <div class="technical__grid">
+    <h2 class="technical__title">Технические параметры</h2>
+    <div class="technical__block">
       <div class="technical__item">
-        <p class="technical__parameter">400</p>
-        <p class="technical__text">Общая площадь, кв. м</p>
+        <img src="<%=require('../src/images/technical/useful_area.png')%>" alt="полезная площадь" class="technical__img">
+        <p class="technical__parameter">1056,9</p>
+        <p class="technical__text">Полезная площадь, кв. м</p>
       </div>
       <div class="technical__item">
+        <img src="<%=require('../src/images/technical/land_area.png')%>" alt="площадь участка" class="technical__img">
+        <p class="technical__parameter">2285</p>
+        <p class="technical__text">Площадь участка, кв. м</p>
+      </div>
+      <div class="technical__item">
+        <img src="<%=require('../src/images/technical/floors_number.png')%>" alt="количество этажей" class="technical__img">
         <p class="technical__parameter">3</p>
-        <p class="technical__text">Высота помещения, м</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">700</p>
-        <p class="technical__text">Строительный объем, куб. м</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">2</p>
         <p class="technical__text">Количество этажей</p>
       </div>
       <div class="technical__item">
-        <p class="technical__parameter">2010</p>
+        <img src="<%=require('../src/images/technical/building.png')%>" alt="год постройки" class="technical__img">
+        <p class="technical__parameter">2005</p>
         <p class="technical__text">Год постройки</p>
       </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Бетон</p>
-        <p class="technical__text">Материал фундамента</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Кирпич</p>
-        <p class="technical__text">Материал стен</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Керамзитобетон</p>
-        <p class="technical__text">Материал перегородок</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Железобетон</p>
-        <p class="technical__text">Материал перекрытий</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Наливной</p>
-        <p class="technical__text">Материал пола</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Пластик</p>
-        <p class="technical__text">Материал окон</p>
-      </div>
-      <div class="technical__item">
-        <p class="technical__parameter">Дерево</p>
-        <p class="technical__text">Материал дверей</p>
-      </div>
+    </div>
+    <div class="technical__grid">
+      <ul class="technical__list">
+        <li class="technical__text technical__text_grid">Высота потолков, м : 3,3</li>
+        <li class="technical__text technical__text_grid">Полы: плиточные</li>
+        <li class="technical__text technical__text_grid">Стены: кирпич, газосиликат</li>
+        <li class="technical__text technical__text_grid">Перегородки: кирпич, пенобетон</li>
+      </ul>
+      <ul class="technical__list">
+        <li class="technical__text technical__text_grid">Перекрытия: железобетон</li>
+        <li class="technical__text technical__text_grid">Фундамент: бетон</li>
+        <li class="technical__text technical__text_grid">Оконные проемы: стеклопакеты, витражи алюминиевые</li>
+        <li class="technical__text technical__text_grid">Дверные проемы: филенчатые</li>
+      </ul>
     </div>
   </section>
 
   <section class="section plan" id="plan">
     <h2 class="plan__title">План помещения</h2>
-    <img src="<%=require('../src/images/plan/plan.jpg')%>" alt="план помещения" class="plan__img">
+    <div class="plan__slider">
+      <img src="<%=require('../src/images/plan/1_floor.jpg')%>" alt="план помещения" class="plan__img">
+      <img src="<%=require('../src/images/plan/2_floor.jpg')%>" alt="план помещения" class="plan__img">
+      <img src="<%=require('../src/images/plan/3_floor.jpg')%>" alt="план помещения" class="plan__img">
+    </div>
+    <a class="plan__arrow-left"></a>
+    <a class="plan__arrow-right"></a>
   </section>
 
   <section class="section photo" id="photo">
     <h2 class="photo__title">Фото</h2>
-    <div class="photo__grid">
-      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="помещение" class="photo__img photo__img_top-left">
-      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="помещение" class="photo__img photo__img_top-right">
-      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="помещение" class="photo__img photo__img_bottom-left">
-      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="помещение" class="photo__img photo__img_bottom-right">
+    <div class="photo__slider">
+      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="помещение" class="photo__img">
+      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="помещение" class="photo__img">
+      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="помещение" class="photo__img">
+      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="помещение" class="photo__img">
     </div>
+    <a class="photo__arrow-left"></a>
+    <a class="photo__arrow-right"></a>
   </section>
 
   <section class="section contacts" id="contacts">
@@ -113,21 +140,21 @@
         <div class="contacts__part">
           <div class="contacts__unit">
             <img src="<%=require('../src/images/contacts/address.svg')%>" alt="адрес" class="contacts__img">
-            <p class="contacts__subtitle">Адрес:</p>
+            <p class="contacts__subtitle">Адрес:&nbsp;</p>
           </div>
           <p class="contacts__item">г. Тверь, ул. Вагжанова, д. 2а</p>
         </div>
         <a class="contacts__part" href="tel:+7038070888">
           <div class="contacts__unit">
             <img src="<%=require('../src/images/contacts/phone.svg')%>" alt="телефон" class="contacts__img">
-            <p class="contacts__subtitle">Телефон:</p>
+            <p class="contacts__subtitle">Телефон:&nbsp;</p>
           </div>
           <p class="contacts__item">+7 903 807-08-88</p>
         </a>
         <a class="contacts__part" href="mailto:tver.rus69@yandex.ru">
           <div class="contacts__unit">
             <img src="<%=require('../src/images/contacts/e-mail.svg')%>" alt="e-mail" class="contacts__img">
-            <p class="contacts__subtitle">E-mail:</p>
+            <p class="contacts__subtitle">E-mail:&nbsp;</p>
           </div>
           <p class="contacts__item">tver.rus69@yandex.ru</p>
         </a>
@@ -136,15 +163,14 @@
   </section>
 
   <section class="form-area">
-    <h2 class="form-area__title">Есть вопросы?</h2>
-    <p class="form-area__subtitle">Запишитесь на осмотр или задайте любой вопрос заполнив форму ниже</p>
-    <form action="POST" class="form">
+    <h2 class="form-area__title">Если у Вас остались вопросы, пожалуйста, заполните форму</h2>
+    <form action="" class="form">
       <input type="text" class="form__input" placeholder="Имя">
-      <input type="text" class="form__input" placeholder="E-mail" required>
-      <input type="text" class="form__input" placeholder="Телефон" required>
+      <input type="email" class="form__input" placeholder="E-mail" required>
       <input type="text" class="form__input" placeholder="Текст">
       <p class="form__text">Напишите Ваш вопрос и мы ответим в ближайшее время</p>
       <button class="form__submit-button" type="submit">Отправить</button>
+      <p class="form__caption">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="form__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
     </form>
   </section>
 
@@ -156,10 +182,11 @@
           <h2 class="footer__title">Альтера</h2>
         </div>
         <p class="footer__address">г. Тверь, ул. Вагжанова, д. 2а</p>
+        <a class="footer__personal" href="./privacy.html" target="_blank">Политика конфиденциальности</a>
       </div>
       <ul class="footer__links">
         <li class="footer__ref"><a class="footer__ref" href="#main">Главная</a></li>
-        <li class="footer__ref"><a class="footer__ref" href="#technical">Технические характеристики</a></li>
+        <li class="footer__ref"><a class="footer__ref" href="#technical">Технические параметры</a></li>
         <li class="footer__ref"><a class="footer__ref" href="#plan">План помещения</a></li>
         <li class="footer__ref"><a class="footer__ref" href="#photo">Фото</a></li>
         <li class="footer__ref"><a class="footer__ref" href="#contacts">Контакты</a></li>
@@ -180,12 +207,42 @@
     </div>
   </section>
 
+  <div class="popup" id="callPopup">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button"></button>
+      <form class="popup__form" name="popup-form" id="popup-form" action="sendmail.php" method="POST">
+        <input type="hidden" name="admin_email[]" value="gusakov.den@mail.ru">
+        <h3 class="popup__title">Заказать консультацию</h3>
+        <p class="popup__subtitle">Мы перезвоним Вам в течение 15 минут</p>
+        <section class="popup__form-section">
+          <input type="tel" data-validate-field="tel" class="popup__input popup__input_req popup__input_tel" id="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
+          <button class="popup__submit-button" type="submit">Отправить</button>
+        </section>
+        <p class="popup__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="popup__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="thanksPopup">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button"></button>
+      <form class="popup__form" name="popup-form" id="popup-form" action="sendmail.php" method="POST">
+        <input type="hidden" name="admin_email[]" value="gusakov.den@mail.ru">
+        <h3 class="popup__title">Спасибо за заявку!</h3>
+        <p class="popup__subtitle">Мы скоро перезвоним Вам</p>
+        <section class="popup__form-section">
+          <button class="popup__submit-button" type="submit">Ок, жду!</button>
+        </section>
+      </form>
+    </div>
+  </div>
+
   <div class="popup popup_dark-background" id="imagePopup">
     <div class="popup__container popup__container_fullsize">
         <button class="popup__close-button" type="button"></button>
         <img class="popup__image" alt="фото">
     </div>
-</div>
+  </div>
 
 </body>
 </html>

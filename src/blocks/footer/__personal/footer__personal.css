@@ -1,0 +1,11 @@
+.footer__personal {
+  text-decoration: none;
+  color: grey;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 30px 0 0 0;
+}
+
+.footer__personal:hover {
+  opacity: .8;
+}

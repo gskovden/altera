@@ -12,3 +12,9 @@
 .footer__call:hover {
   opacity: .8;
 }
+
+@media screen and (max-width: 900px) {
+  .footer__call {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.technical__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .technical__list {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .technical__list {
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 60px;
+  }
+}

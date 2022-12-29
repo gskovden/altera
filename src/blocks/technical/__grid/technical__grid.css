@@ -1,7 +1,13 @@
 .technical__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 70px;
-  margin: 0 50px 0 50px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  width: 100%;
+  justify-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .technical__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
