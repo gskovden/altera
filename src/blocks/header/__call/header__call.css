@@ -14,13 +14,19 @@
   opacity: .8;
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1700px) {
+  .header__call {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .header__call {
     font-size: 18px;
   }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1200px) {
   .header__call {
     font-size: 16px;
   }

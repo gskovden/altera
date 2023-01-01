@@ -1,11 +1,19 @@
 .main__input {
-  margin: 0;
+  margin: 0 20px 0 0;
   padding: 10px;
   border-radius: 100px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .main__input {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .main__input {
+    font-size: 16px;
     padding: 5px;
   }
 }
@@ -14,5 +22,11 @@
   .main__input {
     padding: 0;
     width: 160px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main__input {
+    margin: 0;
   }
 }

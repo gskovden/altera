@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Альтера</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('18doDoRxEuYwjBvzD');
+      })();
+  </script>
 </head>
 <body class="page">
 
@@ -60,7 +67,7 @@
 
   <section class="section main" id="main">
       <h2 class="main__title">Аренда недвижимости</h2>
-      <form action="" class="main__form">
+      <form class="main__form" id="main__form">
         <div class="main__unit">
           <input class="main__input" type="tel" name="tel" id="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
           <button class="main__submit-button" type="submit">Записаться на осмотр</button>
@@ -123,10 +130,10 @@
   <section class="section photo" id="photo">
     <h2 class="photo__title">Фото</h2>
     <div class="photo__slider">
-      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="помещение" class="photo__img">
-      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="помещение" class="photo__img">
+      <img src="<%=require('../src/images/photo/back2.jpg')%>" alt="фото помещения" class="photo__img">
+      <img src="<%=require('../src/images/photo/back.jpg')%>" alt="фото помещения" class="photo__img">
+      <img src="<%=require('../src/images/photo/butt.jpg')%>" alt="фото помещения" class="photo__img">
+      <img src="<%=require('../src/images/photo/main.jpg')%>" alt="фото помещения" class="photo__img">
     </div>
     <a class="photo__arrow-left"></a>
     <a class="photo__arrow-right"></a>
@@ -164,10 +171,10 @@
 
   <section class="form-area">
     <h2 class="form-area__title">Если у Вас остались вопросы, пожалуйста, заполните форму</h2>
-    <form action="" class="form">
-      <input type="text" class="form__input" placeholder="Имя">
-      <input type="email" class="form__input" placeholder="E-mail" required>
-      <input type="text" class="form__input" placeholder="Текст">
+    <form class="form" id="form">
+      <input type="text" class="form__input" name="name" id="name" placeholder="Имя" required>
+      <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
+      <textarea type="text" rows="4" class="form__input" name="message" id="message" placeholder="Текст"></textarea>
       <p class="form__text">Напишите Ваш вопрос и мы ответим в ближайшее время</p>
       <button class="form__submit-button" type="submit">Отправить</button>
       <p class="form__caption">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="form__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
@@ -210,12 +217,11 @@
   <div class="popup" id="callPopup">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
-      <form class="popup__form" name="popup-form" id="popup-form" action="sendmail.php" method="POST">
-        <input type="hidden" name="admin_email[]" value="gusakov.den@mail.ru">
+      <form class="popup__form" name="popup-form" id="popup-form">
         <h3 class="popup__title">Заказать консультацию</h3>
         <p class="popup__subtitle">Мы перезвоним Вам в течение 15 минут</p>
         <section class="popup__form-section">
-          <input type="tel" data-validate-field="tel" class="popup__input popup__input_req popup__input_tel" id="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
+          <input type="tel" data-validate-field="tel" class="popup__input" id="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
           <button class="popup__submit-button" type="submit">Отправить</button>
         </section>
         <p class="popup__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="popup__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
@@ -234,13 +240,6 @@
           <button class="popup__submit-button" type="submit">Ок, жду!</button>
         </section>
       </form>
-    </div>
-  </div>
-
-  <div class="popup popup_dark-background" id="imagePopup">
-    <div class="popup__container popup__container_fullsize">
-        <button class="popup__close-button" type="button"></button>
-        <img class="popup__image" alt="фото">
     </div>
   </div>
 

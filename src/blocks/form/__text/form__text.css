@@ -4,3 +4,9 @@
   font-weight: 400;
   text-align: center;
 }
+
+@media screen and (max-width: 1200px) {
+  .form__text {
+    font-size: 14px;
+  }
+}

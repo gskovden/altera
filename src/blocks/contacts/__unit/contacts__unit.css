@@ -4,8 +4,14 @@
   margin: 0 0 20px 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .contacts__unit {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .contacts__unit {
+    margin: 0 0 5px 0;
   }
 }

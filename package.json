@@ -24,6 +24,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.26.1",
     "inputmask": "^5.0.8-beta.47",

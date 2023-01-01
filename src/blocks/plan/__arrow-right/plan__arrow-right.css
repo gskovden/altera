@@ -10,3 +10,55 @@
 	border-radius: 100px;
 	border: 1px black;
 }
+
+@media screen and (max-width: 1300px) {
+	.plan__arrow-right {
+		height: 60px;
+    width: 60px;
+		background: #fff url(../../../images/photo/arrow-right.svg) no-repeat 24px 16px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.plan__arrow-right {
+		height: 40px;
+    width: 40px;
+		background: #fff url(../../../images/photo/arrow-right-small.svg) no-repeat 15px 9px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.plan__arrow-right {
+		top: 55%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.plan__arrow-right {
+		right: 15px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.plan__arrow-right {
+		top: 60%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.plan__arrow-right {
+		top: 65%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.plan__arrow-right {
+		right: 10px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.plan__arrow-right {
+		top: 70%;
+	}
+}

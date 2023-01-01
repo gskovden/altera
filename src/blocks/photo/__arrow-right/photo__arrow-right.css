@@ -10,3 +10,55 @@
 	border-radius: 100px;
 	border: 1px black;
 }
+
+@media screen and (max-width: 1300px) {
+	.photo__arrow-right {
+		height: 60px;
+    width: 60px;
+		background: #fff url(../../../images/photo/arrow-right.svg) no-repeat 24px 16px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.photo__arrow-right {
+		height: 40px;
+    width: 40px;
+		background: #fff url(../../../images/photo/arrow-right-small.svg) no-repeat 15px 9px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.photo__arrow-right {
+		top: 55%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.photo__arrow-right {
+		right: 15px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.photo__arrow-right {
+		top: 60%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.photo__arrow-right {
+		top: 65%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.photo__arrow-right {
+		right: 10px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.photo__arrow-right {
+		top: 70%;
+	}
+}

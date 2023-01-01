@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin: 0;
 }
 
 @media screen and (max-width: 700px) {
   .footer__logo-area {
     margin: 0 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__logo-area {
+    margin: 0;
   }
 }

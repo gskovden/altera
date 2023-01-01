@@ -6,9 +6,16 @@
   color: black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .contacts__part {
     flex-direction: row;
     margin: 0 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .contacts__part {
+    flex-direction: column;
+    align-items: center;
   }
 }

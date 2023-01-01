@@ -4,3 +4,9 @@
   background-color: #080849;
   color: grey;
 }
+
+@media screen and (max-width: 400px) {
+  .copyright {
+    height: auto;
+  }
+}

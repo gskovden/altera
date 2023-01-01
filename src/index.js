@@ -17,7 +17,58 @@ const photo = document.querySelector('.photo');
 const plan = document.querySelector('.plan');
 const politics = document.querySelector('.politics');
 const technical = document.querySelector('.technical');
+const thanksPopup = document.getElementById('#thanksPopup');
 
+//отправка формы
+document.getElementById("main__form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector(".main__input").value = "";
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
+
+document.getElementById("popup-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector(".popup__input").value = "";
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
+      document.querySelector("#message").value = "";
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
 
 //маска телефона
 let selector = document.querySelectorAll('input[type="tel"]');
@@ -197,16 +248,16 @@ let planWidth;
 
 function planInit() {
   planWidth = document.querySelector('.plan').offsetWidth;
-  planSliderLine.style.width = width * planImages.length + 'px';
+  planSliderLine.style.width = planWidth * planImages.length + 'px';
   planImages.forEach(item => {
-        item.style.width = width + 'px';
+        item.style.width = planWidth + 'px';
         item.style.height = 'auto';
     });
     planRollSlider();
 }
 
 planInit();
-window.addEventListener('resize', init);
+window.addEventListener('resize', planInit);
 
 document.querySelector('.plan__arrow-right').addEventListener('click', function () {
   planCount++;
@@ -225,5 +276,5 @@ document.querySelector('.plan__arrow-left').addEventListener('click', function (
 });
 
 function planRollSlider() {
-  planSliderLine.style.transform = 'translate(-' + planCount * width + 'px)';
+  planSliderLine.style.transform = 'translate(-' + planCount * planWidth + 'px)';
 }

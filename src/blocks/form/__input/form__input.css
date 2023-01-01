@@ -1,36 +1,20 @@
 .form__input {
   min-height: 50px;
-  width: 700px;
+  width: 50%;
   margin: 0 0 20px 0;
   font-size: 20px;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1300px) {
   .form__input {
-    width: 600px;
+    font-size: 18px;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   .form__input {
-    width: 500px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .form__input {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .form__input {
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .form__input {
-    width: 200px;
+    font-size: 16px;
   }
 }

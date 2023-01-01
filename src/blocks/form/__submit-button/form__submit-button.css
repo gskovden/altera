@@ -7,9 +7,22 @@
   font-size: 20px;
   font-weight: 700;
   color: white;
-  width: 100%;
+  width: 50%;
 }
 
 .form__submit-button:hover {
   opacity: .8;
+}
+
+@media screen and (max-width: 1300px) {
+  .form__submit-button {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form__submit-button {
+    font-size: 16px;
+  }
 }
