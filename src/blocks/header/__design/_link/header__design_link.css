@@ -1,10 +1,22 @@
 .header__design_link {
   color: #535353;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 30px;
   text-decoration: none;
 }
 
 .header__design_link:hover {
   color: violet;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__design_link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__design_link {
+    font-size: 12px;
+  }
 }

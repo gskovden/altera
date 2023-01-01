@@ -31,7 +31,7 @@
         <li class="header__link"><a class="header__item" href="#photo">Фото</a></li>
         <li class="header__link"><a class="header__item" href="#contacts">Контакты</a></li>
       </ul>
-      <a class="header__phone" href="tel:+7038070888">
+      <a class="header__phone" href="tel:+79038070888">
         <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
         <p class="header__tel">+7 903 807-08-88</p>
       </a>
@@ -39,7 +39,7 @@
     </div>
     <div class="header__burger-type">
       <div class="header__burger-links">
-        <a class="header__logo-area_burger" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+        <a class="header__logo-area_burger" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo_burger"><h1 class="header__title_burger">Альтера</h1></a>
         <ul class="header__burger-list">
           <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
           <li class="header__link"><a class="header__item" href="#technical">Технические параметры</a></li>
@@ -48,7 +48,7 @@
           <li class="header__link"><a class="header__item" href="#contacts">Контакты</a></li>
         </ul>
         <a class="header__consult-burger">Заказать консультацию</a>
-        <a class="header__area" href="tel:+7038070888">
+        <a class="header__area" href="tel:+79038070888">
           <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
           <p class="header__item">+7 903 807-08-88</p>
         </a>
@@ -198,7 +198,7 @@
         <li class="footer__ref"><a class="footer__ref" href="#photo">Фото</a></li>
         <li class="footer__ref"><a class="footer__ref" href="#contacts">Контакты</a></li>
       </ul>
-      <a class="footer__phone" href="tel:+7038070888">
+      <a class="footer__phone" href="tel:+79038070888">
         <img src="<%=require('../src/images/footer/phone.svg')%>" alt="телефон" class="footer__img">
         <p class="footer__tel">+7 903 807-08-88</p>
       </a>
@@ -232,12 +232,11 @@
   <div class="popup" id="thanksPopup">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
-      <form class="popup__form" name="popup-form" id="popup-form" action="sendmail.php" method="POST">
-        <input type="hidden" name="admin_email[]" value="gusakov.den@mail.ru">
+      <form class="popup__form" name="popup-form" id="popup-form">
         <h3 class="popup__title">Спасибо за заявку!</h3>
         <p class="popup__subtitle">Мы скоро перезвоним Вам</p>
         <section class="popup__form-section">
-          <button class="popup__submit-button" type="submit">Ок, жду!</button>
+          <button class="popup__thanks-button" type="submit">Ок, жду!</button>
         </section>
       </form>
     </div>

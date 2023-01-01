@@ -5,3 +5,9 @@
 .header__link:last-child {
   margin: 0;
 }
+
+@media screen and (max-width: 1300px) {
+  .header__link {
+    margin: 0 0 10px 0;
+  }
+}

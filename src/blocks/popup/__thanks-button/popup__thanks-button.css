@@ -1,0 +1,21 @@
+.popup__thanks-button {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.popup__thanks-button:hover {
+  opacity: 0.8;
+}

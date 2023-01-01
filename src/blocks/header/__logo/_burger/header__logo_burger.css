@@ -1,0 +1,21 @@
+.header__logo_burger {
+  width: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__logo_burger {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__logo_burger {
+    width: 65px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__logo_burger {
+    width: 60px;
+  }
+}

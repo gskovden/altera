@@ -1,7 +1,14 @@
 .header__area {
   margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   text-decoration: none;
   color: white;
+  margin-bottom: 10px;
+}
+
+.header__area:last-of-type {
+  margin-bottom: 0;
 }

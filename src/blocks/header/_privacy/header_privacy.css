@@ -1,4 +1,8 @@
 .header_privacy {
   position: static;
   background-color:#5F8EB3;
+  margin: 0;
+  height: 70px;
+  z-index: 100;
+  width: 100%;
 }

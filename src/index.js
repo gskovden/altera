@@ -9,6 +9,10 @@ const footer = document.querySelector('.footer');
 const copyright = document.querySelector('.copyright');
 const headerCall = document.querySelector('.header__call');
 const footerCall = document.querySelector('.footer__call');
+const burgerCall = document.querySelector('.header__consult-burger');
+const burgerLink = document.querySelectorAll('.header__link');
+const headerBurgerType = document.querySelector('.header__burger-type');
+const burgerButton = document.querySelector('.header__burger-btn');
 const sections = document.querySelectorAll('.section');
 const contacts = document.querySelector('.contacts');
 const formArea = document.querySelector('.form-area');
@@ -17,58 +21,9 @@ const photo = document.querySelector('.photo');
 const plan = document.querySelector('.plan');
 const politics = document.querySelector('.politics');
 const technical = document.querySelector('.technical');
-const thanksPopup = document.getElementById('#thanksPopup');
-
-//отправка формы
-document.getElementById("main__form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const serviceID = "service_odiwnjj";
-  const templateID = "template_46z28h3";
-
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      document.querySelector(".main__input").value = "";
-    },
-    (err) => {
-      alert(JSON.stringify(err));
-    }
-  );
-});
-
-document.getElementById("popup-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const serviceID = "service_odiwnjj";
-  const templateID = "template_46z28h3";
-
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      document.querySelector(".popup__input").value = "";
-    },
-    (err) => {
-      alert(JSON.stringify(err));
-    }
-  );
-});
-
-document.getElementById("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const serviceID = "service_odiwnjj";
-  const templateID = "template_46z28h3";
-
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      document.querySelector("#name").value = "";
-      document.querySelector("#email").value = "";
-      document.querySelector("#message").value = "";
-    },
-    (err) => {
-      alert(JSON.stringify(err));
-    }
-  );
-});
+const thanksPopup = document.querySelector('#thanksPopup');
+const callPopup = document.querySelector('#callPopup');
+const popupThanksButton = document.querySelector('.popup__thanks-button');
 
 //маска телефона
 let selector = document.querySelectorAll('input[type="tel"]');
@@ -83,16 +38,11 @@ window.addEventListener('scroll', () => {
   } else {
 		header.classList.remove('header_scroll');
 	}
-  // if (burgerButton.onclick) {
-	// 	header.classList.remove('header_scroll');
-  // }
 })
 
 //функция открытия попапов
 function openPopup() {
   popup.classList.add('popup_opened');
-	// burgerButton.classList.remove('header__burger-btn_active');
-	// headerBurger.classList.remove('header__burger-type_active');
   document.addEventListener('keydown', closePopupEsc);
 };
 
@@ -136,13 +86,6 @@ function onInput() {
   }
 }
 
-//обработчики событий
-closeButton.addEventListener('mousedown', closePopup);
-popup.addEventListener('mousedown', closePopupClickOverlay);
-headerCall.addEventListener('click', openPopup);
-footerCall.addEventListener('click', openPopup);
-inputEmail.addEventListener('input', onInput);
-
 // выделение активного меню
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
@@ -163,11 +106,7 @@ window.addEventListener('scroll', () => {
 });
 
 //бургер меню
-function burger() {
-	const burgerButton = document.querySelector('.header__burger-btn');
-  const headerBurgerType = document.querySelector('.header__burger-type');
-	
-	burgerButton.addEventListener('click', function() {
+function burger() {	
 		burgerButton.classList.toggle('header__burger-btn_active');
     headerBurgerType.classList.toggle('header__burger-type_active');
     footer.classList.toggle('footer_hidden');
@@ -196,10 +135,108 @@ function burger() {
     if (politics) {
       politics.classList.toggle('politics_hidden');
     }
-	});
+	}
+
+//закрытие бургера
+function burgerClose() {
+  headerBurgerType.classList.remove('header__burger-type_active');
+  burgerButton.classList.remove('header__burger-btn_active');
+  footer.classList.remove('footer_hidden');
+  copyright.classList.remove('copyright_hidden');
+  if (headerBlock) {
+    headerBlock.classList.remove('header__block_hidden');
+  }
+  if (contacts) {
+    contacts.classList.remove('contacts_hidden');
+  }
+  if (formArea) {
+    formArea.classList.remove('form-area_hidden');
+  }
+  if (main) {
+    main.classList.remove('main_hidden');
+  }
+  if (photo) {
+    photo.classList.remove('photo_hidden');
+  }
+  if (plan) {
+    plan.classList.remove('plan_hidden');
+  }
+  if (technical) {
+    technical.classList.remove('technical_hidden');
+  }
+  if (politics) {
+    politics.classList.remove('politics_hidden');
+  }
 }
 
-burger();
+//обработчики событий
+closeButton.addEventListener('mousedown', closePopup);
+popup.addEventListener('mousedown', closePopupClickOverlay);
+headerCall.addEventListener('click', openPopup);
+footerCall.addEventListener('click', openPopup);
+burgerCall.addEventListener('click', openPopup);
+if (popupThanksButton) {
+  popupThanksButton.addEventListener('click', closePopup);
+}
+burgerLink.forEach(el => {
+	el.addEventListener("click", burgerClose);
+});
+burgerButton.addEventListener('click', burger);
+
+//отправка формы
+document.getElementById("popup-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector(".popup__input").value = "";
+      callPopup.classList.remove('popup_opened');
+      thanksPopup.classList.add('popup_opened');
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
+
+document.getElementById("main__form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector(".main__input").value = "";
+      thanksPopup.classList.add('popup_opened');
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const serviceID = "service_odiwnjj";
+  const templateID = "template_46z28h3";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
+      document.querySelector("#message").value = "";
+      thanksPopup.classList.add('popup_opened');
+    },
+    (err) => {
+      alert(JSON.stringify(err));
+    }
+  );
+});
 
 //слайдер фото
 const images = document.querySelectorAll('.photo .photo__slider img');

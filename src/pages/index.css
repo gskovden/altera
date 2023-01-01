@@ -3,6 +3,7 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__title/_burger/header__title_burger.css);
 @import url(../blocks/header/__block/header__block.css);
 @import url(../blocks/header/__call/header__call.css);
 @import url(../blocks/header/__img/header__img.css);
@@ -13,6 +14,7 @@
 @import url(../blocks/header/__nav/header__nav.css);
 @import url(../blocks/header/__link/header__link.css);
 @import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__logo/_burger/header__logo_burger.css);
 @import url(../blocks/header/__logo-area/header__logo-area.css);
 @import url(../blocks/header/_scroll/header_scroll.css);
 @import url(../blocks/header/_privacy/header_privacy.css);
@@ -23,9 +25,8 @@
 @import url(../blocks/header/__block/_hidden/header__block_hidden.css);
 @import url(../blocks/header/__burger-type/header__burger-type.css);
 @import url(../blocks/header/__burger-type/_active/header__burger-type_active.css);
-@import url(../blocks/header/__logo-area_burger/header__logo-area_burger.css);
+@import url(../blocks/header/__logo-area/_burger/header__logo-area_burger.css);
 @import url(../blocks/header/__burger-list/header__burger-list.css);
-@import url(../blocks/header/__burger-link/header__burger-link.css);
 @import url(../blocks/header/__consult-burger/header__consult-burger.css);
 @import url(../blocks/header/__area/header__area.css);
 @import url(../blocks/header/__design/header__design.css);
@@ -112,6 +113,7 @@
 @import url(../blocks/popup/_dark-background/popup_dark-background.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__personal/popup__personal.css);
+@import url(../blocks/popup/__thanks-button/popup__thanks-button.css);
 @import url(../blocks/form-area/form-area.css);
 @import url(../blocks/form-area/__subtitle/form-area__subtitle.css);
 @import url(../blocks/form-area/__title/form-area__title.css);

@@ -4,27 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Альтера</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('18doDoRxEuYwjBvzD');
+      })();
+  </script>
 </head>
 
 <body class="page">
     
-    <header class="header header_privacy">
-        <div class="header__block">
-          <a class="header__logo-area" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
-          <ul class="header__nav">
-            <li class="header__link"><a class="header__item" href="./index.html#main">Главная</a></li>
-            <li class="header__link"><a class="header__item" href="./index.html#technical">Технические параметры</a></li>
-            <li class="header__link"><a class="header__item" href="./index.html#plan">План помещения</a></li>
-            <li class="header__link"><a class="header__item" href="./index.html#photo">Фото</a></li>
-            <li class="header__link"><a class="header__item" href="./index.html#contacts">Контакты</a></li>
-          </ul>
-          <a class="header__phone" href="tel:+7038070888">
-            <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
-            <p class="header__tel">+7 903 807-08-88</p>
-          </a>
-          <a class="header__call">Заказать консультацию</a>
-        </div>
-      </header>
+  <header class="header_privacy">
+    <div class="header__burger">
+      <div class="header__burger-btn">
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+      </div>
+    </div>
+    <div class="header__block">
+      <a class="header__logo-area" href="./index.html#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+      <ul class="header__nav">
+        <li class="header__link"><a class="header__item" href="./index.html#main">Главная</a></li>
+        <li class="header__link"><a class="header__item" href="./index.html#technical">Технические параметры</a></li>
+        <li class="header__link"><a class="header__item" href="./index.html#plan">План помещения</a></li>
+        <li class="header__link"><a class="header__item" href="./index.html#photo">Фото</a></li>
+        <li class="header__link"><a class="header__item" href="./index.html#contacts">Контакты</a></li>
+      </ul>
+      <a class="header__phone" href="tel:+79038070888">
+        <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
+        <p class="header__tel">+7 903 807-08-88</p>
+      </a>
+      <a class="header__call">Заказать консультацию</a>
+    </div>
+    <div class="header__burger-type">
+      <div class="header__burger-links">
+        <a class="header__logo-area_burger" href="./index.html#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+        <ul class="header__burger-list">
+          <li class="header__link"><a class="header__item" href="./index.html#main">Главная</a></li>
+          <li class="header__link"><a class="header__item" href="./index.html#technical">Технические параметры</a></li>
+          <li class="header__link"><a class="header__item" href="./index.html#plan">План помещения</a></li>
+          <li class="header__link"><a class="header__item" href="./index.html#photo">Фото</a></li>
+          <li class="header__link"><a class="header__item" href="./index.html#contacts">Контакты</a></li>
+        </ul>
+        <a class="header__consult-burger">Заказать консультацию</a>
+        <a class="header__area" href="tel:+79038070888">
+          <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
+          <p class="header__item">+7 903 807-08-88</p>
+        </a>
+        <a href="#contacts" class="header__area">
+          <img src="<%=require('../src/images/burger/address.svg')%>" alt="адрес" class="header__img">
+          <p class="header__item">г. Тверь, ул. Вагжанова, д. 2а</p>
+        </a>
+        <a href="mailto:tver.rus69@yandex.ru" class="header__area">
+          <img src="<%=require('../src/images/burger/email.svg')%>" alt="e-mail" class="header__img">
+          <p class="header__item">tver.rus69@yandex.ru</p>
+        </a>
+        <span class="header__design">Разработано в<a class="header__design_link" href="https://gskovdesign.ru/" target="_blank">&nbsp;gskovdesign.ru</a></span>
+      </div>
+    </div>
+  </header>
 
       <main class="politics">
         <h1 class="politics__title">Политика в отношении обработки персональных данных</h1>
@@ -160,7 +200,7 @@
             <li class="footer__ref"><a class="footer__ref" href="./index.html#photo">Фото</a></li>
             <li class="footer__ref"><a class="footer__ref" href="./index.html#contacts">Контакты</a></li>
           </ul>
-          <a class="footer__phone" href="tel:+7038070888">
+          <a class="footer__phone" href="tel:+79038070888">
             <img src="<%=require('../src/images/footer/phone.svg')%>" alt="телефон" class="footer__img">
             <p class="footer__tel">+7 903 807-08-88</p>
           </a>
@@ -179,12 +219,11 @@
       <div class="popup" id="callPopup">
         <div class="popup__container">
           <button class="popup__close-button" type="button"></button>
-          <form class="popup__form" name="popup-form" id="popup-form" action="sendmail.php" method="POST">
-            <input type="hidden" name="admin_email[]" value="gusakov.den@mail.ru">
+          <form class="popup__form" name="popup-form" id="popup-form">
             <h3 class="popup__title">Заказать консультацию</h3>
             <p class="popup__subtitle">Мы перезвоним Вам в течение 15 минут</p>
             <section class="popup__form-section">
-              <input type="tel" data-validate-field="tel" class="popup__input popup__input_req popup__input_tel" id="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
+              <input type="tel" data-validate-field="tel" class="popup__input" id="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
               <button class="popup__submit-button" type="submit">Отправить</button>
             </section>
             <p class="popup__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="popup__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>

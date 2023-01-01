@@ -1,0 +1,25 @@
+.header__title_burger {
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+  text-decoration: none;
+  color: midnightblue;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__title_burger {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__title_burger {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__title_burger {
+    font-size: 32px;
+  }
+}
