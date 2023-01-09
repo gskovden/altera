@@ -5,12 +5,10 @@
   color: white;
   font-size: 20px;
   font-weight: 400;
-  opacity: .9;
 }
 
 .header__item:hover {
   text-decoration: underline;
-  opacity: 1;
 }
 
 @media screen and (max-width: 1800px) {

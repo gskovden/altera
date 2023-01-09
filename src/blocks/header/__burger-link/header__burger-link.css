@@ -1,0 +1,36 @@
+.header__burger-link {
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header__burger-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__burger-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__burger-link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__burger-link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .header__burger-link {
+    font-size: 12px;
+  }
+}

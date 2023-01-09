@@ -4,3 +4,15 @@
   justify-content: space-around;
   margin: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  .popup__form-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .popup__form-section {
+    margin: 20px;
+  }
+}

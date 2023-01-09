@@ -14,12 +14,12 @@
 
 @media screen and (max-width: 500px) {
   .header__title_burger {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .header__title_burger {
-    font-size: 32px;
+    font-size: 30px;
   }
 }

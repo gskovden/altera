@@ -23,7 +23,6 @@
 @media screen and (max-width: 1200px) {
   .main__submit-button {
     font-size: 16px;
-    padding: 5px;
   }
 }
 
@@ -35,7 +34,7 @@
 
 @media screen and (max-width: 500px) {
   .main__submit-button {
-    width: 180px;
+    width: 300px;
     margin-top: 10px;
   }
 }

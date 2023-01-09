@@ -1,4 +1,17 @@
 .popup__subtitle {
   text-align: center;
   margin: 0;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__subtitle {
+    margin: 10px 20px 40px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup__subtitle {
+    font-size: 14px;
+  }
 }
