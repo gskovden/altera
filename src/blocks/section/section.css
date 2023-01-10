@@ -1,3 +1,7 @@
 .section {
   padding-top: 15px;
 }
+
+.section:first-of-type {
+  padding-top: 0;
+}

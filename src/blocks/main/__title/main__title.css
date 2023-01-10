@@ -1,5 +1,5 @@
 .main__title {
-  margin: 0 20px;
+  margin: 100px 20px 0 20px;
   color: white;
   font-size: 110px;
   font-weight: 700;
@@ -15,7 +15,7 @@
   right: 0;
   bottom: 0;
   background: #2A2C2F;
-  opacity: .8;
+  opacity: .9;
   z-index: -1; 
 }
 
