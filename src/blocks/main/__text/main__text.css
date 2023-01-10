@@ -40,12 +40,6 @@
 
 @media screen and (max-width: 350px) {
   .main__text {
-    width: 250px;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .main__text {
-    width: 200px;
+    width: 181px;
   }
 }

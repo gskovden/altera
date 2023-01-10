@@ -38,3 +38,9 @@
     margin-top: 10px;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .main__submit-button {
+    width: 181px;
+  }
+}

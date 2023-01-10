@@ -21,12 +21,19 @@
 @media screen and (max-width: 600px) {
   .main__input {
     padding: 0;
-    width: 160px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .main__input {
     margin: 0;
+    width: 250px;
+    height: 26px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .main__input {
+    width: 181px;
   }
 }
