@@ -16,7 +16,8 @@
   bottom: 0;
   background: #2A2C2F;
   opacity: .9;
-  z-index: -1; 
+  z-index: -1;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 1800px) {
