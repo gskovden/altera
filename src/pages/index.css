@@ -41,6 +41,13 @@
 @import url(../blocks/main/__unit/main__unit.css);
 @import url(../blocks/main/__personal/main__personal.css);
 @import url(../blocks/main/_hidden/main_hidden.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/about/__block/about__block.css);
+@import url(../blocks/about/__img/about__img.css);
+@import url(../blocks/about/__item/about__item.css);
+@import url(../blocks/about/__text/about__text.css);
+@import url(../blocks/about/__title/about__title.css);
+@import url(../blocks/about/__link/about__link.css);
 @import url(../blocks/technical/technical.css);
 @import url(../blocks/technical/__title/technical__title.css);
 @import url(../blocks/technical/__grid/technical__grid.css);

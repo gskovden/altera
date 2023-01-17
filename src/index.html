@@ -42,6 +42,7 @@
       <a class="header__logo-area" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
       <ul class="header__nav">
         <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
+        <li class="header__link"><a class="header__item" href="#about">Обзор помещения</a></li>
         <li class="header__link"><a class="header__item" href="#technical">Технические параметры</a></li>
         <li class="header__link"><a class="header__item" href="#plan">План помещения</a></li>
         <li class="header__link"><a class="header__item" href="#photo">Фото</a></li>
@@ -58,6 +59,7 @@
         <a class="header__logo-area_burger" href="#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo_burger"><h1 class="header__title_burger">Альтера</h1></a>
         <ul class="header__burger-list">
           <li class="header__link"><a class="header__item" href="#main">Главная</a></li>
+          <li class="header__link"><a class="header__item" href="#about">Обзор помещения</a></li>
           <li class="header__link"><a class="header__item" href="#technical">Технические параметры</a></li>
           <li class="header__link"><a class="header__item" href="#plan">План помещения</a></li>
           <li class="header__link"><a class="header__item" href="#photo">Фото</a></li>
@@ -90,6 +92,19 @@
         </div>
         <p class="main__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="main__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
       </form>
+  </section>
+
+  <section class="section about" id="about">
+    <h2 class="about__title">Обзор помещения</h2>
+    <div class="about__block">
+      <img src="<%=require('../src/images/about/about.webp')%>" alt="фото помещения" class="about__img">
+      <div class="about__item">
+        <p class="about__text">Помещение находится в г. Тверь по адресу ул. Вагжанова, д. 2а. Город занимает наиболее выгодную с экономической точки зрения расположение - между Москвой и Санкт-Петербургом. Тверь является крупным транспортным узлом, пересечением многих туристических и гастрольных маршрутов.</p>
+        <p class="about__text">Здание находится рядом с оживленной улицей на пересечении Центрального и Московского районов города. Рядом находятся 4 университета, 2 общеобразовательные школы, бизнес-центр «Тверь», стадион «Юность», 5 банков (2 филиала СберБанка и др.), продовольственные магазины, парк и сквер, что обеспечивает высокую интенсивность проходимости потока как в будние, так и в выходные дни.</p>
+        <p class="about__text">В соседних зданиях расположены 5 аптек, 3 автобусные остановки находятся рядом со зданием, которые формируют высокий трафик в утренние и вечерние часы. Вокруг помещения имеются парковочные места, которые обеспечивают доступность. В радиусе 500 метров расположено больше 100 жилых домов - благодаря этому обеспечивается высокая конверсия и лучшие продажи.</p>
+        <a class="about__link">Подробнее о городе Тверь</a>
+      </div>
+    </div>
   </section>
 
   <section class="section technical" id="technical">
@@ -225,7 +240,7 @@
   <section class="copyright">
     <div class="copyright__block">
       <p class="copyright__title">ООО "Альтера"</p>
-      <p class="copyright__subtitle">Все права защищены. ©2007 - 2022</p>
+      <p class="copyright__subtitle">Все права защищены. ©2007 - 2023</p>
       <p class="copyright__design">Разработано в <a class="copyright__ref" href="https://gskovdesign.ru/" target="_blank">gskovdesign</a></p>
     </div>
   </section>

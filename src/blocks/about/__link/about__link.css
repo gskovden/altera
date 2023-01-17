@@ -1,0 +1,22 @@
+.about__link {
+  margin: 0;
+  cursor: pointer;
+  color: midnightblue;
+  font-size: 18px;
+}
+
+.about__link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+  .about__link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about__link {
+    font-size: 14px;
+  }
+}

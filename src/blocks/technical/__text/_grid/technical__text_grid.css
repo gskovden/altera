@@ -1,5 +1,6 @@
 .technical__text_grid {
-  text-align:left;
+  text-align: left;
+  line-height: 1.23;
 }
 
 @media screen and (max-width: 1000px) {

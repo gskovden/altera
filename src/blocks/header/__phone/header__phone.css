@@ -10,6 +10,18 @@
   opacity: .8;
 }
 
+@media screen and (max-width: 1850px) {
+  .header__phone {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header__phone {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .header__phone {
     display: none;
