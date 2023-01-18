@@ -1,26 +1,17 @@
 @font-face {
-  src: url('../fonts/Montserrat-Regular.ttf') format('ttf'),
-      url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-      url('../fonts/Montserrat-Regular.woff') format('woff');
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  src: url('../fonts/Montserrat-Bold.ttf') format('ttf'),
-      url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-      url('../fonts/Montserrat-Bold.woff') format('woff');
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  src: url('../fonts/Montserrat-Black.ttf') format('ttf'),
-      url('../fonts/Montserrat-Black.woff2') format('woff2'),
-      url('../fonts/Montserrat-Black.woff') format('woff');
-  font-family: 'Montserrat';
+  src: url('../fonts/Gilroy-ExtraBold.ttf') format('ttf'),
+      url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-family: 'Gilroy';
   font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('../fonts/Gilroy-Light.ttf') format('ttf'),
+      url('../fonts/Gilroy-Light.woff2') format('woff2'),
+      url('../fonts/Gilroy-Light.woff') format('woff');
+  font-family: 'Gilroy';
+  font-weight: 400;
   font-display: swap;
 }

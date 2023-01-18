@@ -55,6 +55,11 @@ module.exports = {
         template: 'src/privacy.html',
         favicon: 'src/images/logo/logo.ico'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'history.html',
+        template: 'src/history.html',
+        favicon: 'src/images/logo/logo.ico'
+      }),
       new MiniCssExtractPlugin(), // подключение плагина для объединения файлов
       new CopyWebpackPlugin({
         patterns: [

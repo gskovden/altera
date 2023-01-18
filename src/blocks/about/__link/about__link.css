@@ -3,6 +3,7 @@
   cursor: pointer;
   color: midnightblue;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .about__link:hover {
