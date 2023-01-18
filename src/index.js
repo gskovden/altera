@@ -21,6 +21,8 @@ const photo = document.querySelector('.photo');
 const plan = document.querySelector('.plan');
 const politics = document.querySelector('.politics');
 const technical = document.querySelector('.technical');
+const history = document.querySelector('.history');
+const about = document.querySelector('.about');
 const thanksPopup = document.querySelector('#thanksPopup');
 const callPopup = document.querySelector('#callPopup');
 const popupThanksButton = document.querySelector('.popup__thanks-button');
@@ -134,6 +136,12 @@ function burger() {
     }
     if (politics) {
       politics.classList.toggle('politics_hidden');
+    }
+    if (about) {
+      about.classList.toggle('about_hidden');
+    }
+    if (history) {
+      history.classList.toggle('history_hidden');
     }
 	}
 
