@@ -10,3 +10,15 @@
   padding-top: 0;
   background-image: url(../../images/main/main.webp);
 }
+
+@media screen and (max-width: 1300px) {
+  .main {
+    background-image: url(../../images/main/main_small.webp);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    background-image: url(../../images/main/main_supersmall.webp);
+  }
+}

@@ -3,3 +3,9 @@
   font-size: 12px;
   margin: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .popup__text {
+    font-size: 10px;
+  }
+}
