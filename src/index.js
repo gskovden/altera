@@ -1,8 +1,12 @@
 import './pages/index.css';
 import Inputmask from "../inputmask.es6.js";
 
-const closeButton = document.querySelector('.popup__close-button');
-const popup = document.querySelector('.popup');
+const popups = Array.from(document.querySelectorAll('.popup'));
+const imagePopup = document.querySelector('#imagePopup');
+const callPopup = document.querySelector('#callPopup');
+const thanksPopup = document.querySelector('#thanksPopup');
+const closeButtons = popups.map((item) =>
+  item.querySelector('.popup__close-button'));
 const header = document.querySelector('.header');
 const headerBlock = document.querySelector('.header__block');
 const footer = document.querySelector('.footer');
@@ -23,9 +27,8 @@ const politics = document.querySelector('.politics');
 const technical = document.querySelector('.technical');
 const history = document.querySelector('.history');
 const about = document.querySelector('.about');
-const thanksPopup = document.querySelector('#thanksPopup');
-const callPopup = document.querySelector('#callPopup');
 const popupThanksButton = document.querySelector('.popup__thanks-button');
+const popupImg = imagePopup.querySelector('.popup__image');
 
 //маска телефона
 let selector = document.querySelectorAll('input[type="tel"]');
@@ -43,19 +46,24 @@ window.addEventListener('scroll', () => {
 })
 
 //функция открытия попапов
-function openPopup() {
+function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEsc);
 };
 
-//закрытие попапа
-const closePopup = function () {
-  const popupOpened = document.querySelector('.popup_opened');
-  if (popupOpened) {
-    popupOpened.classList.remove('popup_opened');
-  }
-  document.removeEventListener('keydown', closePopupEsc);
-};
+//открытие попапа консультации
+function openCallPopup() {
+  openPopup(callPopup);
+}
+
+//закрытие попапа 
+const closePopup = function () { 
+  const popupOpened = document.querySelector('.popup_opened'); 
+  if (popupOpened) { 
+    popupOpened.classList.remove('popup_opened'); 
+    document.removeEventListener('keydown', closePopupEsc); 
+  } 
+}; 
 
 //закрытие попапа нажатием Esc
 const closePopupEsc = function (event) {
@@ -71,6 +79,30 @@ const closePopupClickOverlay = function (event) {
   }
   closePopup();
 };
+
+//открытие попапа плана
+function planPopup(el) {
+  popupImg.src = el.getAttribute('src');
+  popupImg.alt = el.getAttribute('alt');
+  openPopup(imagePopup);
+}
+
+document.querySelectorAll('.plan__img').forEach(plan =>
+  plan.addEventListener('click', () => 
+    planPopup(plan)
+  ));
+
+//открытие попапа картинки
+function imgPopup(el) {
+  popupImg.src = el.getAttribute('src');
+  popupImg.alt = el.getAttribute('alt');
+  openPopup(imagePopup);
+}
+
+document.querySelectorAll('.photo__img').forEach(image =>
+  image.addEventListener('click', () => 
+    imgPopup(image)
+  ));
 
 //валидация инпута
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
@@ -178,11 +210,13 @@ function burgerClose() {
 }
 
 //обработчики событий
-closeButton.addEventListener('mousedown', closePopup);
-popup.addEventListener('mousedown', closePopupClickOverlay);
-headerCall.addEventListener('click', openPopup);
-footerCall.addEventListener('click', openPopup);
-burgerCall.addEventListener('click', openPopup);
+closeButtons.forEach((item) => 
+  item.addEventListener('click', () => closePopup(item.closest('.popup')))
+);
+popups.forEach((item) => item.addEventListener('click', closePopupClickOverlay));
+headerCall.addEventListener('click', openCallPopup);
+footerCall.addEventListener('click', openCallPopup);
+burgerCall.addEventListener('click', openCallPopup);
 if (popupThanksButton) {
   popupThanksButton.addEventListener('click', closePopup);
 }
@@ -257,7 +291,7 @@ function init() {
     sliderLine.style.width = width * images.length + 'px';
     images.forEach(item => {
         item.style.width = width + 'px';
-        item.style.height = 'auto';
+        item.style.height = 'fit-content';
     });
     rollSlider();
 }

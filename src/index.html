@@ -88,7 +88,7 @@
       <form class="main__form" id="main__form">
         <div class="main__unit">
           <input class="main__input" type="tel" name="tel" id="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
-          <button class="main__submit-button" type="submit">Записаться на осмотр</button>
+          <button class="main__submit-button" type="submit">Заказать звонок</button>
         </div>
         <p class="main__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="main__personal" href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
       </form>
@@ -99,11 +99,11 @@
     <div class="about__block">
       <img src="<%=require('../src/images/about/about.webp')%>" alt="фото помещения" class="about__img">
       <div class="about__item">
-        <p class="about__text">Помещение находится в <i>г. Тверь по адресу ул. Вагжанова, д. 2а</i>. Город занимает наиболее выгодную с экономической точки зрения расположение - между Москвой и Санкт-Петербургом. Тверь является крупным транспортным узлом, пересечением многих туристических и гастрольных маршрутов.</p>
-        <p class="about__text">Здание находится рядом с оживленной улицей на пересечении Центрального и Московского районов города. Рядом находятся <i>4 университета,2 общеобразовательные школы, бизнес-центр, стадион, 5 банков (2 филиала СберБанка и др.), продовольственные магазины, парк и сквер</i>, что обеспечивает высокую интенсивность проходимости потока как в будние, так и в выходные дни.</p>
-        <p class="about__text">В соседних зданиях расположены <i>5 аптек, 3 автобусные остановки находятся рядом со зданием</i>, которые формируют высокий трафик в утренние и вечерние часы. Вокруг помещения имеется <i>более 50 парковочных мест</i>. В радиусе 500 метров расположено больше <i>100 жилых домов</i> - благодаря этому обеспечивается высокая конверсия и лучшие продажи.</p>
-        <p class="about__text">Для удобства поставки товара установлен <i>грузовой подъемник</i>.</p>
-        <a class="about__link" href="./history.html">Подробнее о городе Тверь</a>
+        <p class="about__text">Помещение находится в<a href="#contacts" class="about__color">&nbsp;г. Тверь по адресу ул. Вагжанова, д. 2а.&nbsp;</a>Город Тверь занимает наиболее выгодную с экономической точки зрения расположение - между Москвой и Санкт-Петербургом. Тверь является крупным транспортным узлом, пересечением многих туристических и гастрольных маршрутов.</p>
+        <p class="about__text">Здание находится рядом с оживленной улицей на пересечении Центрального и Московского районов города. Рядом находятся 4 университета,2 общеобразовательные школы, бизнес-центр, стадион, 5 банков (2 филиала СберБанка и др.), продовольственные магазины, парк и сквер, что обеспечивает высокую интенсивность проходимости потока как в будние, так и в выходные дни.</p>
+        <p class="about__text">В соседних зданиях расположены 5 аптек, 3 автобусные остановки находятся рядом со зданием, которые формируют высокий трафик в утренние и вечерние часы. Вокруг помещения имеется <span class="about__bold">более 50 парковочных мест</span>. В радиусе 500 метров расположено больше 100 жилых домов - благодаря этому обеспечивается высокая конверсия и лучшие продажи.</p>
+        <p class="about__text">Для удобства поставки товара установлен грузовой подъемник.</p>
+        <a class="about__link" href="./history.html"><img  src="<%=require('../src/images/about/arrow.svg')%>" alt="стрелка" class="about__arrow">Подробнее о городе Тверь</a>
       </div>
     </div>
   </section>
@@ -162,7 +162,7 @@
   <section class="section photo" id="photo">
     <h2 class="photo__title">Фото</h2>
     <div class="photo__slider">
-      <img src="<%=require('../src/images/photo/main.webp')%>" alt="фото помещения" class="photo__img">
+      <img src="<%=require('../src/images/about/about.webp')%>" alt="фото помещения" class="photo__img">
       <img src="<%=require('../src/images/photo/butt.webp')%>" alt="фото помещения" class="photo__img">
       <img src="<%=require('../src/images/photo/back.webp')%>" alt="фото помещения" class="photo__img">
       <img src="<%=require('../src/images/photo/back2.webp')%>" alt="фото помещения" class="photo__img">
@@ -272,6 +272,13 @@
           <button class="popup__thanks-button" type="submit">Закрыть</button>
         </section>
       </form>
+    </div>
+  </div>
+
+  <div class="popup" id="imagePopup">
+    <div class="popup__container popup__container_fullsize">
+        <button class="popup__close-button" type="button"></button>
+        <img class="popup__image">
     </div>
   </div>
 

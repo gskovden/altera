@@ -3,7 +3,8 @@
   font-size: 32px;
   font-weight: 700;
   text-decoration: none;
-  color: midnightblue;
+  color: #f2f3f4;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1800px) {

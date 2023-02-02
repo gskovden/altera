@@ -3,6 +3,8 @@
   padding: 10px;
   border-radius: 100px;
   font-size: 20px;
+  border: 1px solid grey;
+  width: 170px;
 }
 
 @media screen and (max-width: 1300px) {
