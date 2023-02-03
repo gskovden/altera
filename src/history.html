@@ -40,14 +40,14 @@
       </div>
     </div>
     <div class="header__block">
-      <a class="header__logo-area" href="./index.html#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+      <a class="header__logo-area" href="./index#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
       <ul class="header__nav">
-        <li class="header__link"><a class="header__item" href="./index.html#main">Главная</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#about">Обзор помещения</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#technical">Технические параметры</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#plan">План помещения</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#photo">Фото</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#contacts">Контакты</a></li>
+        <li class="header__link"><a class="header__item" href="./index#main">Главная</a></li>
+        <li class="header__link"><a class="header__item" href="./index#about">Обзор помещения</a></li>
+        <li class="header__link"><a class="header__item" href="./index#technical">Технические параметры</a></li>
+        <li class="header__link"><a class="header__item" href="./index#plan">План помещения</a></li>
+        <li class="header__link"><a class="header__item" href="./index#photo">Фото</a></li>
+        <li class="header__link"><a class="header__item" href="./index#contacts">Контакты</a></li>
       </ul>
       <a class="header__phone" href="tel:+79038070888">
         <img src="<%=require('../src/images/header/phone.svg')%>" alt="телефон" class="header__img">
@@ -57,14 +57,14 @@
     </div>
     <div class="header__burger-type">
       <div class="header__burger-links">
-        <a class="header__logo-area_burger" href="./index.html#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
+        <a class="header__logo-area_burger" href="./index#main"><img src="<%=require('../src/images/logo/logo.svg')%>" alt="логотип" class="header__logo"><h1 class="header__title">Альтера</h1></a>
         <ul class="header__burger-list">
-          <li class="header__link"><a class="header__item" href="./index.html#main">Главная</a></li>
-        <li class="header__link"><a class="header__item" href="./index.html#about">Обзор помещения</a></li>
-          <li class="header__link"><a class="header__item" href="./index.html#technical">Технические параметры</a></li>
-          <li class="header__link"><a class="header__item" href="./index.html#plan">План помещения</a></li>
-          <li class="header__link"><a class="header__item" href="./index.html#photo">Фото</a></li>
-          <li class="header__link"><a class="header__item" href="./index.html#contacts">Контакты</a></li>
+          <li class="header__link"><a class="header__item" href="./index#main">Главная</a></li>
+        <li class="header__link"><a class="header__item" href="./index#about">Обзор помещения</a></li>
+          <li class="header__link"><a class="header__item" href="./index#technical">Технические параметры</a></li>
+          <li class="header__link"><a class="header__item" href="./index#plan">План помещения</a></li>
+          <li class="header__link"><a class="header__item" href="./index#photo">Фото</a></li>
+          <li class="header__link"><a class="header__item" href="./index#contacts">Контакты</a></li>
         </ul>
         <a class="header__consult-burger">Заказать консультацию</a>
         <a class="header__area" href="tel:+79038070888">
@@ -124,14 +124,15 @@
               <h2 class="footer__title">Альтера</h2>
             </div>
             <p class="footer__address">г. Тверь, ул. Вагжанова, д. 2а</p>
+            <a class="footer__personal" href="./privacy" target="_blank">Политика конфиденциальности</a>
           </div>
           <ul class="footer__links">
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#main">Главная</a></li>
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#about">Обзор помещения</a></li>
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#technical">Технические параметры</a></li>
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#plan">План помещения</a></li>
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#photo">Фото</a></li>
-            <li class="footer__ref"><a class="footer__ref" href="./index.html#contacts">Контакты</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#main">Главная</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#about">Обзор помещения</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#technical">Технические параметры</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#plan">План помещения</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#photo">Фото</a></li>
+            <li class="footer__ref"><a class="footer__ref" href="./index#contacts">Контакты</a></li>
           </ul>
           <a class="footer__phone" href="tel:+79038070888">
             <img src="<%=require('../src/images/footer/phone.svg')%>" alt="телефон" class="footer__img">
@@ -174,6 +175,13 @@
               <button class="popup__thanks-button" type="submit">Закрыть</button>
             </section>
           </form>
+        </div>
+      </div>
+
+      <div class="popup" id="imagePopup">
+        <div class="popup__container_fullsize">
+            <button class="popup__close-button" type="button"></button>
+            <img class="popup__image">
         </div>
       </div>
 

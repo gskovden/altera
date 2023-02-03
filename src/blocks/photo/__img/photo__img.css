@@ -1,6 +1,6 @@
 .photo__img {
 	margin: 0;
 	width: 100%;
-	height: fit-content;
+	height: auto;
 	cursor: pointer;
 }

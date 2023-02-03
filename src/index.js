@@ -1,12 +1,11 @@
 import './pages/index.css';
 import Inputmask from "../inputmask.es6.js";
 
-const popups = Array.from(document.querySelectorAll('.popup'));
+const popups = document.querySelectorAll('.popup');
 const imagePopup = document.querySelector('#imagePopup');
 const callPopup = document.querySelector('#callPopup');
 const thanksPopup = document.querySelector('#thanksPopup');
-const closeButtons = popups.map((item) =>
-  item.querySelector('.popup__close-button'));
+const closeButtons = document.querySelectorAll('.popup__close-button');
 const header = document.querySelector('.header');
 const headerBlock = document.querySelector('.header__block');
 const footer = document.querySelector('.footer');
@@ -39,7 +38,9 @@ im.mask(selector);
 window.addEventListener('scroll', () => {
   if (window.scrollHeight !== window.innerHeight && window.scrollY !== 0) {
     // Если прокрутка есть, то делаем блок прозрачным
-    header.classList.add('header_scroll');
+    if (header) {
+      header.classList.add('header_scroll');
+    }
   } else {
 		header.classList.remove('header_scroll');
 	}
@@ -61,8 +62,8 @@ const closePopup = function () {
   const popupOpened = document.querySelector('.popup_opened'); 
   if (popupOpened) { 
     popupOpened.classList.remove('popup_opened'); 
-    document.removeEventListener('keydown', closePopupEsc); 
   } 
+  document.removeEventListener('keydown', closePopupEsc); 
 }; 
 
 //закрытие попапа нажатием Esc
@@ -82,8 +83,8 @@ const closePopupClickOverlay = function (event) {
 
 //открытие попапа плана
 function planPopup(el) {
-  popupImg.src = el.getAttribute('src');
-  popupImg.alt = el.getAttribute('alt');
+    popupImg.src = el.getAttribute('src');
+    popupImg.alt = el.getAttribute('alt');
   openPopup(imagePopup);
 }
 
@@ -94,8 +95,8 @@ document.querySelectorAll('.plan__img').forEach(plan =>
 
 //открытие попапа картинки
 function imgPopup(el) {
-  popupImg.src = el.getAttribute('src');
-  popupImg.alt = el.getAttribute('alt');
+    popupImg.src = el.getAttribute('src');
+    popupImg.alt = el.getAttribute('alt');
   openPopup(imagePopup);
 }
 
@@ -291,7 +292,7 @@ function init() {
     sliderLine.style.width = width * images.length + 'px';
     images.forEach(item => {
         item.style.width = width + 'px';
-        item.style.height = 'fit-content';
+        item.style.height = 'auto';
     });
     rollSlider();
 }
